@@ -8,6 +8,7 @@ class CustomTextField extends StatelessWidget {
   TextEditingController fieldController = TextEditingController();
   TextInputType type;
   Icon icon;
+  bool obscureText;
 
   CustomTextField(
       {super.key,
@@ -15,6 +16,7 @@ class CustomTextField extends StatelessWidget {
       required this.customValidator,
       required this.fieldController,
       required this.type,
+      required this.obscureText,
       required this.icon});
 
   @override
@@ -26,6 +28,7 @@ class CustomTextField extends StatelessWidget {
             color: const Color.fromARGB(255, 0, 0, 0),
             fontSize: MediaQuery.of(context).size.height * 0.016),
         controller: fieldController,
+        obscureText: obscureText,
         decoration: InputDecoration(
             hintText: hintText,
             hintStyle: TextStyle(

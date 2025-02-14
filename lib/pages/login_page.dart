@@ -115,6 +115,7 @@ class _LoginPageState extends State<LoginPage> {
                   type: TextInputType.emailAddress,
                   customValidator: (value) => validateUserId(context, value),
                   icon: const Icon(Icons.person),
+                  obscureText: false,
                 ),
                 CustomTextField(
                   hintText: "Enter your password here",
@@ -122,6 +123,7 @@ class _LoginPageState extends State<LoginPage> {
                   type: TextInputType.text,
                   customValidator: (value) => validatePassword(context, value),
                   icon: const Icon(Icons.key),
+                  obscureText: true,
                 ),
                 GestureDetector(
                   onTap: () {

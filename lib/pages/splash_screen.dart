@@ -52,9 +52,10 @@ class _SplashScreenState extends State<SplashScreen> {
         width: MediaQuery.of(context).size.width,
         decoration: const BoxDecoration(color: Colors.white),
         child: Image(
-          image: const AssetImage('assets/images/logo.png'),
-          height: MediaQuery.of(context).size.height * 0.120,
-          width: MediaQuery.of(context).size.width * 0.05120,
+          image: const NetworkImage(
+              'https://www.shutterstock.com/image-vector/cow-logo-farm-product-design-600nw-2506761705.jpg'),
+          height: MediaQuery.of(context).size.height * 0.100,
+          width: MediaQuery.of(context).size.width * 0.050,
         ),
       ),
     );
